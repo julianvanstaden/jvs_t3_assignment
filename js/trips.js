@@ -1,88 +1,105 @@
-[
+const trips = [
     {
       "name": "Caribbean Paradise Cruise",
-      "price": 1200,
+      "price": "1200",
       "duration": "7 days",
       "places": "Bahamas, Jamaica, Cayman Islands",
-      "image": "<img src="" alt="">"
+      "image": "trip1.jpeg"
     },
     {
       "name": "Mediterranean Odyssey Cruise",
-      "price": 1500,
+      "price": "1500",
       "duration": "10 days",
-      "places": "Italy, Greece, Turkey"
+      "places": "Italy, Greece, Turkey",
+      "image": "trip2.jpg"
     },
     {
       "name": "Alaskan Glacier Expedition",
-      "price": 1800,
+      "price": "1800",
       "duration": "8 days",
-      "places": "Alaska, USA"
+      "places": "Alaska, USA",
+      "image": "trip3.jpeg"
+
     },
     {
       "name": "Tropical Hawaii Cruise",
-      "price": 1300,
+      "price": "1300",
       "duration": "9 days",
-      "places": "Hawaii, USA"
+      "places": "Hawaii, USA",
+      "image": "trip4.jpeg"
+
     },
     {
       "name": "Norwegian Fjords Discovery",
-      "price": 1600,
+      "price": "1600",
       "duration": "12 days",
-      "places": "Norway"
+      "places": "Norway",
+      "image": "trip5.jpg"
+
     },
     {
       "name": "Asian Adventure Cruise",
-      "price": 1700,
+      "price": "1700",
       "duration": "14 days",
-      "places": "Singapore, Thailand, Malaysia"
+      "places": "Singapore, Thailand, Malaysia",
+      "image": "trip6.webp"
+
     },
     {
       "name": "Pacific Island Getaway",
-      "price": 1400,
+      "price": "1400",
       "duration": "11 days",
-      "places": "Fiji, Tahiti, Bora Bora"
+      "places": "Fiji, Tahiti, Bora Bora",
+      "image": "trip7.webp"
+
     },
     {
       "name": "Egypt and Jordan Exploration",
-      "price": 2000,
+      "price": "2000",
       "duration": "15 days",
-      "places": "Egypt, Jordan"
+      "places": "Egypt, Jordan",
+      "image": "trip8.jpg"
+
     },
     {
       "name": "Baltic Sea Capitals Cruise",
-      "price": 1750,
+      "price": "1750",
       "duration": "9 days",
-      "places": "Sweden, Finland, Russia"
+      "places": "Sweden, Finland, Russia",
+      "image": "trip9.jpg"
+
     },
     {
       "name": "South American Discovery",
-      "price": 1900,
+      "price": "1900",
       "duration": "13 days",
-      "places": "Brazil, Argentina, Chile"
+      "places": "Brazil, Argentina, Chile",
+      "image": "trip10.jpg"
+
     }
-  ]
+  ];
   
-  // Function to dynamically add trip cards
-  function addTripCards() {
-    const tripCardsContainer = document.getElementById("tripCards");
+$(document).ready(function(){
+    loadTrips();
+}); 
 
-    tripsData.forEach(trip => {
-      const card = document.createElement("div");
-      card.classList.add("card", "mb-3");
+// Load and display all the trips
+function loadTrips() {
 
-      card.innerHTML = `
-        <img src="..." class="card-img-top" alt="Trip Image">
-        <div class="card-body">
-          <h5 class="card-title">${trip.name}</h5>
-          <p class="card-text">Price: $${trip.price}</p>
-          <p class="card-text">Duration: ${trip.duration}</p>
-          <p class="card-text">Places: ${trip.places}</p>
-        </div>
-      `;
+for (let i = 0; i < trips.length; i++) {
+    // const trip = trips[i];
+    console.log(trips[i])
+    // Append the trip card template and set its content
+    $("#tripsContainer").append($("#tripCardTemplate").html());
+  
+    // Get the most recently added trip card
+    let currentChild = $("#tripsContainer").children().eq(i+1);
+  
+    // Set the content for the trip card from the trips data
+    $(currentChild).find(".card-img-top").attr('src','../assets/' + trips[i].image);
+    $(currentChild).find("#nameText").text(trips[i].name);
+    $(currentChild).find("#priceText").text('Price: $' + trips[i].price);
+    $(currentChild).find("#durationText").text('Duration: ' + trips[i].duration);
+    $(currentChild).find("#placesText").text('Places: ' + trips[i].places);
 
-      tripCardsContainer.appendChild(card);
-    });
-  }
-
-  // Call the function to add trip cards
-  addTripCards();
+}};
