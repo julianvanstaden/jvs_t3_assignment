@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Carousel Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-dark" style="background-color: black;">
+  <a class="navbar-brand" href="#">
+    <img src="assets/Untitled design (2).png" alt="Logo" style="height: 50px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pages/trips.html">Trips</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pages/checkout.html">Checkout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/hero image 2.png" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/hero-image2-cruise.png" class="d-block w-100" alt="Slide 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- About Us -->
+<div style="margin-top: 10px; margin-bottom: 30px; margin-left: 550px;">
+    <h1 style="text-decoration: underline;">ABOUT US</h1>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="assets/martini_marina_1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets/reiseuhu-EUFPvipu16A-unsplash.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets/colin-lloyd-JW5j3o_HYgM-unsplash.jpg" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-d7Si4j2SHK0iJw2f5OP8y0B0n/6WwCVJpPLI9Urg5fEJ0pAegw/pEB7uHd8f4DIb" crossorigin="anonymous"></script>
+
+</body>
+</html>
