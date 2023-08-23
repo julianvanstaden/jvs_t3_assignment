@@ -78,6 +78,10 @@ const trips = [
 
     }
   ];
+
+$("#applyFilters").click(function () {
+    filterTrips();
+});
   
 $(document).ready(function(){
     loadTrips();
@@ -103,3 +107,47 @@ for (let i = 0; i < trips.length; i++) {
     $(currentChild).find("#placesText").text('Places: ' + trips[i].places);
 
 }};
+
+function filterTrips() {
+  const durationFilter = $("#durationFilter").val();
+  const destinationTypeFilter = $("#destinationTypeFilter").val();
+  const specialFilter = $("#specialFilter").val();
+
+  $(".card").each(function () {
+    const duration = $(this).find("#durationText").text().toLowerCase();
+    const destinations = $(this).find("#placesText").text().toLowerCase();
+    const special = $(this).data("special");
+
+    let shouldShow = true;
+
+    if (durationFilter === "short" && duration.includes("days") && !duration.includes("long")) {
+      shouldShow = false;
+    } else if (durationFilter === "long" && duration.includes("long")) {
+      shouldShow = false;
+    }
+
+    if (destinationTypeFilter === "single" && destinations.includes(",")) {
+      shouldShow = false;
+    } else if (destinationTypeFilter === "multi" && !destinations.includes(",")) {
+      shouldShow = false;
+    }
+
+    if (destinationTypeFilter === "round" && destinations.split(", ").length < 2) {
+      shouldShow = false;
+    }
+
+    if (specialFilter === "rowboat") {
+      // Assuming you have a data field named "price" in your trip data
+      const price = parseInt($(this).find("#priceText").text().replace("$", ""));
+      if (price > 500 || special) {
+        shouldShow = false;
+      }
+    }
+
+    if (shouldShow) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+}

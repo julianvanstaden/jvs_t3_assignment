@@ -48,6 +48,31 @@
     </div>
   </section>
   
+  <div class="filter-container">
+    <label for="durationFilter">Duration:</label>
+    <select id="durationFilter">
+      <option value="all">All Durations</option>
+      <option value="short">Short Duration Trips</option>
+      <option value="long">Long Duration Trips</option>
+    </select>
+
+    <label for="destinationTypeFilter">Destination Type:</label>
+    <select id="destinationTypeFilter">
+      <option value="all">All Destination Types</option>
+      <option value="single">Single Destination</option>
+      <option value="multi">Multi Destinations</option>
+      <option value="round">Round Trips</option>
+    </select>
+
+    <label for="specialFilter">Special:</label>
+    <select id="specialFilter">
+      <option value="all">All Specials</option>
+      <option value="rowboat">Row Boat Special</option>
+    </select>
+
+    <button id="applyFilters">Apply Filters</button>
+  </div>
+
 
 <div class="container mt-5">
   <div class="row" id="tripsContainer">
