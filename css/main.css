@@ -13,3 +13,34 @@
     font-size: 14px;
     font-weight: bold;
 }
+
+.custom-button {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+  }
+
+  .custom-button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  /* Style for the cards */
+  .card:hover {
+    border: 2px solid black;
+  }
+
+  .custom-button-t2 {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .custom-button-t2:hover {
+    background-color: blue;
+    color: white;
+  }

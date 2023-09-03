@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Carousel Demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-dark" style="background-color: black;">
+<nav class="navbar navbar-dark" style="background-color: black;">
   <a class="navbar-brand" href="#">
     <img src="assets/Untitled design (2).png" alt="Logo" style="height: 50px;">
   </a>
@@ -18,7 +18,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -33,15 +33,37 @@
 </nav>
 
 <!-- Carousel -->
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <!-- Slide 1 -->
+    <div class="carousel-item active position-relative">
       <img src="assets/hero image 2.png" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-content position-absolute top-0 start-0 p-4" style="width: 400px; height: 600px; margin-top: 15px; margin-left: 50px;">
+        <h1 style="color: white;" style="margin-left: 50px;">LUXURY YACHT EXPERIENCE</h1>
+        <p style="color: white;" style="margin-left: 50px;">Experience luxury with the new Luxury Yacht Experience. Spend 5 Nights on this Yacht with 3 friends.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#luxuryYachtModal" style="margin-left: 200px;">Learn More</button>
+      </div>
     </div>
-    <div class="carousel-item">
+    <!-- Slide 2 -->
+    <div class="carousel-item position-relative">
       <img src="assets/hero-image2-cruise.png" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-content position-absolute top-0 start-0 p-4">
+        <h3>Slide 2 Title</h3>
+        <p>This is the content for Slide 2.</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="carousel-item position-relative">
+      <img src="assets/cruise ship point.jpg" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-content position-absolute top-0 start-0 p-4">
+        <h3>Slide 3 Title</h3>
+        <p>This is the content for Slide 3.</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+      </div>
     </div>
   </div>
+  <!-- Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -52,38 +74,116 @@
   </button>
 </div>
 
-<!-- About Us -->
-<div style="margin-top: 10px; margin-bottom: 30px; margin-left: 550px;">
-    <h1 style="text-decoration: underline;">ABOUT US</h1>
+<!-- Modal -->
+<div class="modal fade-2" id="luxuryYachtModal" tabindex="-1" aria-labelledby="luxuryYachtModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="luxuryYachtModalLabel">Luxury Yacht Experience</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/hero image 2.png" class="img-fluid" alt="Luxury Yacht">
+        <p>Price: R25 000</p>
+        <p>Destination: Caribbean</p>
+        <p>Description: Experience luxury with the new Luxury Yacht Experience. Spend 5 Nights on this Yacht with 3 friends. Book now for an unforgettable holiday trip.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Book Now</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+
+<!-- About Us -->
+<h1 style="text-decoration: underline; color: #000000; margin-left: 550px;">ABOUT US</h1>
+
+<div style="background-color: rgb(255, 255, 255); padding: 20px; border: 2px solid #000000; border-radius: 10px; text-align: center; margin-top: 30px; margin-bottom: 30px; margin-left: 250px; margin-right: 250px;">
+  <p style="margin-left: 20px; margin-right: 20px; color: #000000;">Cruise Platinum is your gateway to the world of luxury travel on the high seas. We are dedicated to curating unforgettable cruise experiences that blend opulence with adventure. Whether you're seeking the tranquility of tropical paradises, the thrill of exploring new cultures, or the finest in onboard amenities, Cruise Platinum caters to your every desire. Our mission is to deliver the pinnacle of cruising, where every moment aboard our ships becomes a cherished memory. Come aboard and let us redefine your journey, one platinum experience at a time.</p>
+  <button type="button" class="btn custom-button-t2" data-bs-toggle="modal" data-bs-target="#aboutUsModal" style="margin-top: 20px;">
+    Read More
+  </button>
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutUsModal" style="margin-top: 20px;">Read More</button> -->
+</div>
+
+
+<div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutUsModalLabel">About Cruise Platinum</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+<!-- Add pictures and paragraphs to the modal -->
+<div class="modal-body">
+  <!-- First Picture and Paragraph -->
+  <div class="row">
+    <div class="col-md-4">
+      <img src="assets/guest-services.avif" alt="Image 1" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec quam in ligula volutpat consectetur.</p>
+    </div>
+  </div>
+
+  <!-- Second Picture and Paragraph -->
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <img src="assets/stateroom-mobile-3.avif" alt="Image 2" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <p>Integer quis elit sed dui euismod feugiat. Proin facilisis velit ac massa tincidunt gravida.</p>
+    </div>
+  </div>
+
+  <!-- Third Picture and Paragraph -->
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <img src="assets/top deck cruise.jpeg" alt="Image 3" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <p>Phasellus luctus sapien a velit luctus, in convallis libero convallis. Aenean dapibus elit in lorem.</p>
+    </div>
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
     <div class="col">
-      <div class="card">
+      <div class="card" style="height: 100%;">
         <img src="assets/martini_marina_1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Fine Dining</h5>
+          <p class="card-text">Discover culinary perfection at sea with our Fine Dining experience. Our top chefs create exquisite dishes from the finest ingredients, offering an unforgettable journey of taste and elegance.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card" style="height: 100%;">
         <img src="assets/reiseuhu-EUFPvipu16A-unsplash.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Scenic Wonders Awaits</h5>
+          <p class="card-text">Experience the world's beauty firsthand with Cruise Platinum. From mesmerizing landscapes to iconic landmarks, our cruises offer an unforgettable visual journey.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="assets/colin-lloyd-JW5j3o_HYgM-unsplash.jpg" class="card-img-top" alt="..." style="height: 300px;">
+      <div class="card" style="height: 100%;">
+        <img src="assets/colin-lloyd-JW5j3o_HYgM-unsplash.jpg" class="card-img-top" alt="..." style="height: 265px;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
+          <h5 class="card-title">Unleash the Fun!</h5>
+          <p class="card-text">Get ready for a whirlwind of excitement with our fun-filled events. From thrilling parties to engaging activities, we have something for everyone. Join us for unforgettable moments and make memories that will last a lifetime.</p>
+
 <!-- Bootstrap JS and jQuery -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
